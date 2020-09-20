@@ -15,6 +15,10 @@
 		2C40804225162A9A00E8614A /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2C40804025162A9A00E8614A /* LaunchScreen.storyboard */; };
 		2C40804D25162A9B00E8614A /* AccelerometerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C40804C25162A9B00E8614A /* AccelerometerTests.swift */; };
 		2C40805825162A9B00E8614A /* AccelerometerUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C40805725162A9B00E8614A /* AccelerometerUITests.swift */; };
+		2C40806B25164F0900E8614A /* awa.png in Resources */ = {isa = PBXBuildFile; fileRef = 2C40806925164F0900E8614A /* awa.png */; };
+		2C40806C25164F0900E8614A /* suiheiki.png in Resources */ = {isa = PBXBuildFile; fileRef = 2C40806A25164F0900E8614A /* suiheiki.png */; };
+		2C4080712516F74400E8614A /* GameViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C4080702516F74400E8614A /* GameViewController.swift */; };
+		2C4080762516F75500E8614A /* ResultViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C4080752516F75500E8614A /* ResultViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -49,6 +53,10 @@
 		2C40805325162A9B00E8614A /* AccelerometerUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = AccelerometerUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		2C40805725162A9B00E8614A /* AccelerometerUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AccelerometerUITests.swift; sourceTree = "<group>"; };
 		2C40805925162A9B00E8614A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		2C40806925164F0900E8614A /* awa.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = awa.png; sourceTree = "<group>"; };
+		2C40806A25164F0900E8614A /* suiheiki.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = suiheiki.png; sourceTree = "<group>"; };
+		2C4080702516F74400E8614A /* GameViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameViewController.swift; sourceTree = "<group>"; };
+		2C4080752516F75500E8614A /* ResultViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResultViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -99,6 +107,7 @@
 		2C40803425162A9700E8614A /* Accelerometer */ = {
 			isa = PBXGroup;
 			children = (
+				2C40806825164F0900E8614A /* 13_Resource */,
 				2C40803525162A9700E8614A /* AppDelegate.swift */,
 				2C40803725162A9700E8614A /* SceneDelegate.swift */,
 				2C40803925162A9700E8614A /* ViewController.swift */,
@@ -106,6 +115,8 @@
 				2C40803E25162A9A00E8614A /* Assets.xcassets */,
 				2C40804025162A9A00E8614A /* LaunchScreen.storyboard */,
 				2C40804325162A9A00E8614A /* Info.plist */,
+				2C4080702516F74400E8614A /* GameViewController.swift */,
+				2C4080752516F75500E8614A /* ResultViewController.swift */,
 			);
 			path = Accelerometer;
 			sourceTree = "<group>";
@@ -126,6 +137,15 @@
 				2C40805925162A9B00E8614A /* Info.plist */,
 			);
 			path = AccelerometerUITests;
+			sourceTree = "<group>";
+		};
+		2C40806825164F0900E8614A /* 13_Resource */ = {
+			isa = PBXGroup;
+			children = (
+				2C40806925164F0900E8614A /* awa.png */,
+				2C40806A25164F0900E8614A /* suiheiki.png */,
+			);
+			path = 13_Resource;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -233,7 +253,9 @@
 			files = (
 				2C40804225162A9A00E8614A /* LaunchScreen.storyboard in Resources */,
 				2C40803F25162A9A00E8614A /* Assets.xcassets in Resources */,
+				2C40806C25164F0900E8614A /* suiheiki.png in Resources */,
 				2C40803D25162A9700E8614A /* Main.storyboard in Resources */,
+				2C40806B25164F0900E8614A /* awa.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -258,6 +280,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				2C4080762516F75500E8614A /* ResultViewController.swift in Sources */,
+				2C4080712516F74400E8614A /* GameViewController.swift in Sources */,
 				2C40803A25162A9700E8614A /* ViewController.swift in Sources */,
 				2C40803625162A9700E8614A /* AppDelegate.swift in Sources */,
 				2C40803825162A9700E8614A /* SceneDelegate.swift in Sources */,
@@ -437,12 +461,13 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = CNG5L6KZNS;
 				INFOPLIST_FILE = Accelerometer/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = app.Ito.Akki.Accelerometer;
+				PRODUCT_BUNDLE_IDENTIFIER = app.Ito.Akki.Accelerometer20200920;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -455,12 +480,13 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = CNG5L6KZNS;
 				INFOPLIST_FILE = Accelerometer/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = app.Ito.Akki.Accelerometer;
+				PRODUCT_BUNDLE_IDENTIFIER = app.Ito.Akki.Accelerometer20200920;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
