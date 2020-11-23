@@ -14,6 +14,7 @@ class GameViewController: UIViewController {
     @IBOutlet private weak var awaImageView: UIImageView!
     let motionManager = CMMotionManager()
     var accelerationX: Double?
+    var accelerationY: Double?
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -25,13 +26,9 @@ class GameViewController: UIViewController {
             motionManager.startAccelerometerUpdates(to: OperationQueue.current!, withHandler: { (data,error) in
             self.accelerationX = (data?.acceleration.x)!
                 self.awaImageView.center.x = self.awaImageView.center.x-CGFloat(self.accelerationX!*20)//間違いが出る可能性がある　！がaccelerationの後についている
-            
-            if self.awaImageView.frame.origin.x < 40 {
-                self.awaImageView.frame.origin.x = 40
-            }
-                if self.awaImageView.frame.origin.x > 260{
-                self.awaImageView.frame.origin.x = 260
-            }
+            self.accelerationY = (data?.acceleration.y)!
+                    self.awaImageView.center.y = self.awaImageView.center.y+CGFloat(self.accelerationY!*20)//間違いが出る可能性がある　！がaccelerationの後についている
+           
         })
      }
     }
@@ -39,6 +36,7 @@ class GameViewController: UIViewController {
     override  func prepare(for segue: UIStoryboardSegue, sender: Any?){
             let resultViewController:ResultViewController = segue.destination as! ResultViewController
             resultViewController.accelerationX = self.accelerationX
+            resultViewController.accelerationY = self.accelerationY
         }
         // Do any additional setup after loading the view.
     

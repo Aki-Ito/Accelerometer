@@ -11,13 +11,18 @@ class ResultViewController: UIViewController {
 
     
     var accelerationX: Double!
+    var accelerationY: Double!
     
     @IBOutlet var label: UILabel!
+    @IBOutlet var Ylabel: UILabel!
     override func viewDidLoad() {
         super.viewDidLoad()
         
         let result: Double = fabs(accelerationX*100)
         label.text = String(format: "%.1f°",result)
+        
+        let Yresult: Double = fabs(accelerationY*100)
+        Ylabel.text = String(format: "%.1f°",Yresult)
         // Do any additional setup after loading the view.
     }
     
